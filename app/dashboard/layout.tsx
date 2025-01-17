@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-// import { Logo } from "./page";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import {
   LayoutDashboard,
@@ -17,9 +16,9 @@ import {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   const links = [
     {
       label: "Dashboard",
@@ -57,19 +56,19 @@ export default function RootLayout({
       ),
     },
   ];
+
   const [open, setOpen] = useState(true);
 
   return (
     <div
       className={cn(
-        "rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1  mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
-        "h-[100vh]" // for your use case, use `h-screen` instead of `h-[60vh]`
+        "rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1 mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
+        "h-[100vh]"
       )}
     >
       <Sidebar open={true}>
         <SidebarBody className="justify-between gap-10">
           <div className="flex flex-col flex-1 overflow-x-hidden overflow-y-auto">
-            {/* {open ? <Logo /> : <LogoIcon />} */}
             <Logo />
             <div className="flex flex-col gap-2 mt-8">
               {links.map((link, idx) => (
@@ -101,18 +100,7 @@ export default function RootLayout({
   );
 }
 
-export const LogoIcon = () => {
-  return (
-    <Link
-      href="#"
-      className="relative z-20 flex items-center py-1 space-x-2 text-sm font-normal text-black"
-    >
-      <div className="flex-shrink-0 w-6 h-5 bg-black rounded-tl-lg rounded-tr-sm rounded-bl-sm rounded-br-lg dark:bg-white" />
-    </Link>
-  );
-};
-
-export const Logo = () => {
+function Logo() {
   return (
     <Link
       href="#"
@@ -128,4 +116,4 @@ export const Logo = () => {
       </motion.span>
     </Link>
   );
-};
+}
