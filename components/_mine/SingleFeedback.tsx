@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function SingleFeedback({
   message,
   uname,
@@ -11,9 +13,12 @@ export default function SingleFeedback({
     <div className="p-2 shadow-md rounded-md border flex items-center gap-4">
       {/* profile */}
       <div className="w-[150px]">
-        <img
+        <Image
           src="/user.png"
           className="bg-white w-[140px] h-[140px] rounded-full"
+          alt="image"
+          width="500"
+          height="500"
         />
       </div>
 

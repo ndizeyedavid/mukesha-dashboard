@@ -13,7 +13,7 @@ import {
 import { Search } from "lucide-react";
 import { useState } from "react";
 
-export default function page() {
+export default function Page() {
   const [open, setOpen] = useState(false);
 
   return (

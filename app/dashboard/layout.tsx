@@ -69,7 +69,8 @@ export default function RootLayout({
       <Sidebar open={true}>
         <SidebarBody className="justify-between gap-10">
           <div className="flex flex-col flex-1 overflow-x-hidden overflow-y-auto">
-            {open ? <Logo /> : <LogoIcon />}
+            {/* {open ? <Logo /> : <LogoIcon />} */}
+            <Logo />
             <div className="flex flex-col gap-2 mt-8">
               {links.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />
