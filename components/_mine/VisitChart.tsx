@@ -1,6 +1,5 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 
 import {
@@ -56,8 +55,8 @@ export default function VisitChart() {
               dataKey="date"
               tickLine={false}
               axisLine={false}
-              tickMargin={0}
               tickFormatter={(value: any) => value.slice(0, 3)}
+              tickMargin={0}
             />
             <ChartTooltip
               cursor={false}

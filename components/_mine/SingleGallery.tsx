@@ -5,13 +5,11 @@ import Image from "next/image";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "../ui/button";
-import { Eye, Heart } from "lucide-react";
 import GalleryModal from "./GalleryModal";
 
 export default function SingleGallery({
@@ -21,11 +19,11 @@ export default function SingleGallery({
   img,
   description,
 }: {
-  title: any;
-  likes: any;
-  views: any;
-  img: any;
-  description: any;
+  title: string;
+  likes: string;
+  views: string;
+  img: string;
+  description: string;
 }) {
   const [open, setOpen] = useState(false);
 
